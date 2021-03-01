@@ -27,9 +27,9 @@
                                 ?>
                                 <div class="factchecked-ad">
                                     <div class="embed"><a href="<?php echo(get_permalink($ad->wp_id)); ?>"><img src="//archive.org/serve/<?php echo($ad->archive_id); ?>/format=Thumbnail"/></div>
-                                    <div class="sponsor"><a href="<?php echo(get_permalink($ad->wp_id)); ?>"><?php echo(implode(", ", $ad->sponsor_names)); ?></a></div>
-                                    <div class="sponsor-type">Sponsor Type: <?php echo(implode(", ", $ad->sponsor_types)); ?></div>
-                                    <div class="candidates">Candidates: <?php echo(implode(", ", $ad->candidate_names)); ?></div>
+                                    <div class="sponsor"><a href="<?php echo(get_permalink($ad->wp_id)); ?>"><?php echo(implode(", ", (array)$ad->sponsor_names)); ?></a></div>
+                                    <div class="sponsor-type">Sponsor Type: <?php echo(implode(", ", (array)$ad->sponsor_types)); ?></div>
+                                    <div class="candidates">Candidates: <?php echo(implode(", ", (array)$ad->candidate_names)); ?></div>
                                 </div>
                                 <?php
                             }
